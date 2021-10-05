@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@ryuzy_high?TNS_ADMIN=D:/Ryuzy/Spring/resource/Wallet_ryuzy
+    username: admin
+    password: Flyhigh4861*
+
+server:
+  port: 9090
+
+security:
+  user:
+    name: user
+    password: 1234
+
+jpa:
+  hibernate:
+    ddl-auto: update
+  properties:
+    hibernate:
+      format_sql: true
+      show_sql: true
+
+profiles:
+  include: security

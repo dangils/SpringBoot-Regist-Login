@@ -1,0 +1,56 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head th:replace="layout/header::userHead">
+</head>
+<body>
+<div class="container">
+    <form class="form-horizontal" th:action="@{/signup}" method="post">
+        <div class="form-group">
+            <label for="userid" class="col-sm-2 control-label">아이디</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control input-large" name="userid" id="userid"
+                       placeholder="아이디" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="userpw" class="col-sm-2 control-label">비밀번호</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control input-large" name="userpw" id="userpw"
+                       placeholder="비밀번호" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="age" class="col-sm-2 control-label">나이</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control input-large" name="age" id="age"
+                       placeholder="나이" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">성별</label>
+            <div class="col-sm-10">
+                남자<input type="radio" name="gender" id="male" value="남자">
+                여자<input type="radio" name="gender" id="female" value="여자">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="role" class="col-sm-2 control-label">권한</label>
+            <div class="col-sm-10">
+                <select name="role" id="role">
+                    <option value="USER">일반사용자</option>
+                    <option value="MANAGER">매니저</option>
+                    <option value="ADMIN">관리자</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-1 col-sm-10">
+                <button type="submit" class="btn btn-success">가입</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div th:replace="layout/footer::footer"></div>
+</body>
+</html>

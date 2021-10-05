@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head th:replace="layout/header::userHead">
+</head>
+
+<body>
+<div class="container">
+    <div class="navbar-header">
+        <nav>
+            <ul class="nav">
+                <li><a class="btn btn-info" href="/signup">회원가입</a></li>
+                <li><a class="btn btn-info" href="/login">로그인</a></li>
+                <li><a class="btn btn-primary" href="/login">구글 로그인</a></li>
+                <li><a class="btn btn-success" href="/login">네이버 로그인</a></li>
+                <li><a class="btn btn-warning" href="/login">카카오 로그인</a></li>
+                <li><a class="btn btn-danger" href="/login">페이스북 로그인</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div th:replace="layout/footer::footer"></div>
+</body>
+</html>
